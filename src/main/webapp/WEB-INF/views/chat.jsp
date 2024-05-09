@@ -10,6 +10,7 @@
 <script>
 $(loadedHandler)
 
+var nickname1 = localStorage.getItem("nickname1");
 nickname = null;
 let webSocket;
 
@@ -32,7 +33,7 @@ let webSocket;
     // WebSocket이 열렸을 때 실행
 	function socketOpen(event){
         //서버에 사용자 정보 전달
-    	webSocket.send('${ssslogin.mem_id}' + "님이 입장하셨습니다.");
+    	webSocket.send(nickname1+ ' : 님이 입장하셨습니다.');
 	    console.log("연결 완료");
 	  }
 
@@ -41,13 +42,13 @@ let webSocket;
        console.log($("#inputmsg").val());
 	  if($("#inputmsg").val().trim() != ""){
 		  // 메시지 포맷
-	       var msg = "${ssslogin.mem_id} : " + $("#inputmsg").val();
+	       var msg = nickname1 + " : " + $("#inputmsg").val();
 	       console.log("송신한 메세지 : " + msg);
 	       // 세션리스트에 메시지를 송신
 	       webSocket.send(msg);
 
 		   //채팅창에 보낸 메세지 표시
-	       $(".content-box").append('<div class="msgbox">${ssslogin.mem_id} : ' + $("#inputmsg").val() + '</div>');
+	       $(".content-box").append('<div class="msgbox">' + nickname1 + " : " + $("#inputmsg").val() + '</div>');
 	       $(".content-box").scrollTop($(".content-box")[0].scrollHeight);
 	       $("#inputmsg").val("");
 		}
@@ -101,7 +102,7 @@ let webSocket;
 		</div>
 	</div>
 	<div class="wrap-members">
-		<div class="joiner">참가자 목록</div>
+		<div class="member">서재원</div>
 	</div>
 </div>
 </body>

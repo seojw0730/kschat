@@ -25,7 +25,7 @@
 }
 
 .content-box {
-	background-color : rgb(120, 200, 255);
+	background-color : #CCFFCC;
 	width : 380px;
 	height : 441px;
 	padding: 10px;
@@ -36,30 +36,32 @@
     overflow: auto;
 }
 .content-box > .notice {
-	background-color : #aaa;
-	border-radius: 10px;
-	color: white;
-	padding: 0 5px;
-	width: fit-content;
-	word-break: break-all;
-	align-self: center;
+	background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding: 0 5px;
+    width: fit-content;
+    word-break: break-all;
+    align-self: center;
+    border: 2px solid #ccc;
 }
 
 .content-box > .msgbox {
-	background-color : yellow;
+	background-color : white;
 	border-radius: 10px;
 	color: black;
-	padding: 0 5px;
+	padding: 5px 10px;
 	width: fit-content;
 	word-break: break-all;
 	align-self: end;
+	border: 2px solid #66CC66;
 }
 
 .content-box > .receivebox {
-	background-color : lawngreen;
+	background-color : #66CC66;
 	border-radius: 10px;
-	color: black;
-	padding: 0 5px;
+	color: white;
+	padding: 5px 10px;
 	width: fit-content;
 	word-break: break-all;
 }
@@ -73,15 +75,29 @@
 #inputmsg {
 	color : black;
 	flex-grow: 1;
+	border: 3px solid #66CC66;
 }
 
 #btn-sendmsg {
 	color : black;
 	flex-shrink : 0;
 	width: 50px;
+	background-color: #98FB98;
+    border: 2px solid #90EE90;
 }
 
 .wrap-members {
 	display:flex;
-	background-color: rgba(255, 165, 0, .7);
+	flex-direction: column;
+	padding: 6px;
+	gap: 5px;
+	background-color: rgba(255, 194, 205, 0.5);;
+	border-radius: 8px;
+}
+
+.member {
+	background-color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: 3px solid #FF6289;
 }
