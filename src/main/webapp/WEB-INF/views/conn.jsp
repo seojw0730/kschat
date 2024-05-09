@@ -1,15 +1,17 @@
 <style>
-body > div{
+#c{
 	width: max-content;
 	margin: 10vh auto 0 auto;
-	border-radius: 30px;
 }
-body > div > div.card-header{
+#ch{
 	background-color: #ffc0cb;
-	border-radius: 30px 30px 0 0;
 }
-body > div > div.card-body{
+#cb{
 	text-align: center;
+}
+#cb>p>input{
+	border-radius: 10px;
+    border: 1px solid black;
 }
 </style>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -38,20 +40,14 @@ $(loadedHandler)
 </script>
 </head>
 <body>
-	<div class="card" style="
-	width: max-content;
-	margin: 10vh auto 0 auto;
-	">
-	  <div class="card-header" style="
-	  background-color: #ffc0cb;
-	  ">
+	<div class="card" id="c">
+	  <div class="card-header" id="ch">
 	    kschat
 	  </div>
-	  <div class="card-body">
+	  <div class="card-body" id="cb">
 	    <h5 class="card-title">사용할 이름을 입력해주세요.</h5>
 	    <p class="card-text"><input type="text" name="name" placeholder="여기여기" style="
-	    border-radius: 10px;
-	    border: 1px solid black;
+
 	    "></p>
 	    <button type="button" class="btn btn-primary" style="
 	    background-color: #ffb6c1;
